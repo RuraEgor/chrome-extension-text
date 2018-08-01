@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Link</title>
+    <link rel="stylesheet" href="style-pop.css">
+</head>
+<body class="body">
+
+<div id="form" class="form-wrap">
+    <h2 class="title-ex">Добавление Ссылки</h2>
+
+    <label class="label" for="name">Название ссылки</label>
+    <input type="text" name="name" id="name" autofocus="" tabindex="1">
+
+    <label class="label" for="select">Категория</label>
+    <select id="select"></select>
+
+    <label class="label" for="link">Ссылка</label>
+    <input type="text" name="link" id="link">
+
+    <label class="label" for="background">Фон</label>
+    <input type="color" id="background" name="background" value="#74AAF6">
+    <div class="back-cont">
+        <div class="back-cont__item js-back-cont__item back-cont__item_red" data-color="#ff0000"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_yellow" data-color="#ffff00"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_lime" data-color="#00ff00"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_blue" data-color="#0080ff"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_lilac" data-color="#8000ff"></div>
+    </div>
+
+    <p class="screen-toggle">
+        <label>
+            <input type="checkbox" name="choise_back" checked="checked" id="choise_back"> - нашжмите
+            если хотите чтобы на вкладки было изображение
+        </label>
+    </p>
+
+    <label class="label" for="title_text">Описание</label>
+    <textarea name="title" id="title_text"></textarea>
+
+    <input type="button" name="but_send" id="but_send_form" value="Создать ссылку" tabindex="1">
+
+    <div class="mes mes-suc" id="mes-suc">Ссылка была создана</div>
+    <div class="mes mes-error" id="mes-error">Ссылка с таким именем уже существует</div>
+</div>
+
+<script src="popup.js"></script>
+
+</body>
+</html>
