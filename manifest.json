@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "GTmetrix Analyzer Plugin",
-  "description": "This extension will analyze a page using GTmetrix",
+  "name": "Take text",
+  "description": "Take text",
   "version": "1.0",
 
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup-text.html"
   },
 
   "content_scripts": [
@@ -15,8 +15,8 @@
       "all_frames": true,
       "matches": ["<all_urls>"],
       "run_at": "document_end",
-      "js": ["popup.js"],
-      "css": ["style-pop.css"]
+      "js": ["popup-text.js"],
+      "css": ["style-pop-text.css"]
     }
   ],
 
