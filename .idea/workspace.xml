@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a44e2597-04c6-42fc-bf9a-674f07aded2c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/popup.html" afterPath="$PROJECT_DIR$/popup-text.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/popup.js" afterPath="$PROJECT_DIR$/popup-text.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/style-pop.css" afterPath="$PROJECT_DIR$/style-pop-text.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icon.png" afterPath="$PROJECT_DIR$/icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manifest.json" afterPath="$PROJECT_DIR$/manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/popup-text.html" afterPath="$PROJECT_DIR$/popup-text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/popup-text.js" afterPath="$PROJECT_DIR$/popup-text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style-pop-text.css" afterPath="$PROJECT_DIR$/style-pop-text.css" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,14 +22,24 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.43976545">
+    <splitter split-orientation="horizontal" split-proportion="0.58268654">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="popup-text.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/popup-text.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="378">
-                  <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+                <state relative-caret-position="306">
+                  <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style-pop-text.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/style-pop-text.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
                   <folding />
                 </state>
               </provider>
@@ -46,8 +52,8 @@
           <file leaf-file-name="popup-text.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/popup-text.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="576">
-                  <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+                <state relative-caret-position="749">
+                  <caret line="99" column="25" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -59,9 +65,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getData</find>
       <find>but_send</find>
-      <find>choice</find>
       <find>m.removeEventListen</find>
       <find>ajaxSend</find>
       <find>screen</find>
@@ -84,11 +88,13 @@
       <find>trim</find>
       <find>links</find>
       <find>masData</find>
-      <find>choise</find>
       <find>#name</find>
       <find>document.getElementById('name')</find>
       <find>link</find>
       <find>fillSel</find>
+      <find>choise</find>
+      <find>choice</find>
+      <find>group</find>
     </findStrings>
     <replaceStrings>
       <replace>ajax-text</replace>
@@ -106,9 +112,9 @@
         <option value="$PROJECT_DIR$/style-pop.css" />
         <option value="$PROJECT_DIR$/popup.js" />
         <option value="$PROJECT_DIR$/manifest.json" />
-        <option value="$PROJECT_DIR$/popup-text.html" />
-        <option value="$PROJECT_DIR$/style-pop-text.css" />
         <option value="$PROJECT_DIR$/popup-text.js" />
+        <option value="$PROJECT_DIR$/style-pop-text.css" />
+        <option value="$PROJECT_DIR$/popup-text.html" />
       </list>
     </option>
   </component>
@@ -287,18 +293,20 @@
       <workItem from="1537532573953" duration="2213000" />
       <workItem from="1537772176683" duration="2581000" />
       <workItem from="1537777255755" duration="275000" />
-      <workItem from="1539352588891" duration="3588000" />
+      <workItem from="1539352588891" duration="5139000" />
+      <workItem from="1539676938953" duration="1819000" />
+      <workItem from="1539770723252" duration="628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72682000" />
+    <option name="totallyTimeSpent" value="76680000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10501066" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10714286" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -653,26 +661,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/popup-text.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="99" column="25" lean-forward="false" selection-start-line="99" selection-start-column="25" selection-end-line="99" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/style-pop-text.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="71" column="5" lean-forward="false" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
+        <state relative-caret-position="540">
+          <caret line="93" column="27" lean-forward="false" selection-start-line="93" selection-start-column="27" selection-end-line="93" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/popup-text.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="47" lean-forward="false" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/popup-text.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="17" column="75" lean-forward="false" selection-start-line="17" selection-start-column="75" selection-end-line="17" selection-end-column="75" />
           <folding />
         </state>
       </provider>

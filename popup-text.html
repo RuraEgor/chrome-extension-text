@@ -11,10 +11,11 @@
 <body class="body">
 
 <div id="form" class="form-wrap">
-    <h2 class="title-ex">Добавление Ссылки</h2>
+    <h2 class="title-ex">Добавление Фразы</h2>
 
-    <label class="label" for="name">Название ссылки</label>
-    <input type="text" name="name" id="name" autofocus="" tabindex="1">
+    <label class="label" for="name">Название фразы</label>
+    <!--<input type="text" name="name" id="name" autofocus="" tabindex="1">-->
+    <textarea type="text" name="name" id="name" autofocus="" tabindex="1"></textarea>
 
     <label class="label" for="select">Категория</label>
     <select id="select"></select>
@@ -37,8 +38,8 @@
 
     <input type="button" name="but_send" id="but_send_form" value="Создать ссылку" tabindex="1">
 
-    <div class="mes mes-suc" id="mes-suc">Ссылка была создана</div>
-    <div class="mes mes-error" id="mes-error">Ссылка с таким именем уже существует</div>
+    <div class="mes mes-suc" id="mes-suc">Фраза была создана</div>
+    <div class="mes mes-error" id="mes-error">Фраза с таким именем уже существует</div>
 </div>
 
 <script src="popup-text.js"></script>

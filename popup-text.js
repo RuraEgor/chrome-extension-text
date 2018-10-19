@@ -7,6 +7,7 @@ let mesEror = document.getElementById('mes-error');
 let masData = {
 	'name': '',
 	'group': '',
+	'group_id': '',
 	'icon': '',
 	'background': '',
 	'title': ''
@@ -44,7 +45,8 @@ if (butSend) {
 		masData['name'] = masData['name'].trim();
 		
 		const $elemSel = document.getElementById('select');
-		masData['group'] = $elemSel.options[$elemSel.selectedIndex].value;
+		masData['group'] = $elemSel.options[$elemSel.selectedIndex].text;
+		masData['group_id'] = $elemSel.options[$elemSel.selectedIndex].value;
 		
 		masData['icon'] = document.getElementById('icon').value;
 		masData['icon'] = masData['icon'].trim();
@@ -72,7 +74,6 @@ function getXhrObject(){
 //=====  FILL THE SELECT
 function fillSel (data) {
 	let select = document.getElementById('select');
-	
 	data['name'].forEach(function (n, i) {
 		let selOpot = document.createElement('option');
 		selOpot.setAttribute('value', data['id'][i]);

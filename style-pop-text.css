@@ -19,6 +19,7 @@
 .form-wrap {
     width: 210px;
     padding: 5px;
+    background: #d3e8fbb8;
 }
 
 .back-cont {
@@ -96,7 +97,9 @@
 #but_send_form {
     width: 100%;
     margin-top: 10px;
-    background: #e4e3e3;
+    background: #2b4bf3b8;
+    color: #0d1a80;
+    font-weight: bold;
     border: none;
     display: block;
     border-radius: 3px;
