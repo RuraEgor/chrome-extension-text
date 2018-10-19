@@ -88,8 +88,8 @@ function ajaxTake() {
 	var params = [];
 	params.push('directories=true');
 	
-	// var url = 'http://ruraeghw.beget.tech/ajax-text/add_del_group.php';
-	var url = 'http://localhost/ajax-text/add_del_group.php';
+	var url = 'http://ruraeghw.beget.tech/ajax-text/add_del_group.php';
+	// var url = 'http://localhost/ajax-text/add_del_group.php';
 	var xhr = getXhrObject();
 	xhr.open('POST', url, true);
 	xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -113,8 +113,8 @@ function ajaxSend() {
 		params.push(key + '=' + masData[key]);
 	}
 	
-    // let url = 'http://ruraeghw.beget.tech/ajax-text/creatLink.php';
-    let url = 'http://localhost/ajax-text/creatLink.php';
+	let url = 'http://ruraeghw.beget.tech/ajax-text/creatLink.php';
+	// let url = 'http://localhost/ajax-text/creatLink.php';
 	
 	let xhr = getXhrObject();
 	xhr.open('POST', url, true);
