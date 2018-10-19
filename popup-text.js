@@ -3,6 +3,7 @@ let butSend = document.getElementById('but_send_form');
 //=====  GET IF-MES BLOCKS
 let mesSuc = document.getElementById('mes-suc');
 let mesEror = document.getElementById('mes-error');
+let mesEmpty = document.getElementById('mes-empty');
 
 let masData = {
 	'name': '',
@@ -14,7 +15,7 @@ let masData = {
 };
 
 
-ajaxTake();  //=====  FULL SELECT
+ajaxTake();   //=====  FULL SELECT
 
 getDataPage();  //=====  TAKE DATA-PAGE
 
@@ -44,18 +45,30 @@ if (butSend) {
 		masData['name'] = document.getElementById('name').value;
 		masData['name'] = masData['name'].trim();
 		
-		const $elemSel = document.getElementById('select');
-		masData['group'] = $elemSel.options[$elemSel.selectedIndex].text;
-		masData['group_id'] = $elemSel.options[$elemSel.selectedIndex].value;
+		if (masData['name'] && masData['name'] != '') {
+			
+			const $elemSel = document.getElementById('select');
+			masData['group'] = $elemSel.options[$elemSel.selectedIndex].text;
+			masData['group_id'] = $elemSel.options[$elemSel.selectedIndex].value;
+			let nameSelIndex = $elemSel.selectedIndex;
+			
+			localStorage.setItem('nameSelIndex', nameSelIndex);
+			
+			masData['icon'] = document.getElementById('icon').value;
+			masData['icon'] = masData['icon'].trim();
+			
+			masData['background'] = document.getElementById('background').value;
+			
+			masData['title'] = document.getElementById('title_text').value;
+			
+			ajaxSend();
+			
+		} else {
+			document.getElementById('name').value = '';
+			mesEmpty.style.display = 'block';
+			setTimeout( () => { mesEmpty.style.display = 'none'; }, 2000);
+		}
 		
-		masData['icon'] = document.getElementById('icon').value;
-		masData['icon'] = masData['icon'].trim();
-		
-		masData['background'] = document.getElementById('background').value;
-		
-		masData['title'] = document.getElementById('title_text').value;
-		
-		ajaxSend();
 	});
 }
 
@@ -80,6 +93,7 @@ function fillSel (data) {
 		selOpot.innerHTML = n;
 		if (selOpot && select) select.appendChild(selOpot);
 	});
+	takeLocalStore();  //=====  TAKE DATA-PAGE
 }
 
 
@@ -172,6 +186,19 @@ function getDataPage() {
 			} + ')();'
 		}, function(results) {
 			document.getElementById('name').value = results[0]['text'].trim();
+			document.getElementById('name').select();
 		});
+	}
+}
+
+
+//=====  TAKE NAME DIRECTORY FROM LOCALSTORAGE
+function takeLocalStore() {
+	
+	let nameSelIndex = localStorage.getItem('nameSelIndex');
+	
+	if (nameSelIndex) {
+		const $elemSel = document.getElementById('select');
+		document.getElementById('select').options[nameSelIndex].selected = true;
 	}
 }

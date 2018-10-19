@@ -64,6 +64,9 @@
 
 #name {
     width: 100%;
+    min-height: 100px;
+    font-size: 17px;
+    resize: vertical;
 }
 
 #select {
