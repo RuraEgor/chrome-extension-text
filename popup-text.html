@@ -13,12 +13,16 @@
 <div id="form" class="form-wrap">
     <h2 class="title-ex">Добавление Фразы</h2>
 
-    <label class="label" for="name">Название фразы</label>
+    <!--<label class="label" for="name">Название фразы</label>-->
     <!--<input type="text" name="name" id="name" autofocus="" tabindex="1">-->
-    <textarea type="text" name="name" id="name" autofocus="" tabindex="1"></textarea>
+    <textarea type="text" name="name" id="name"
+              placeholder="Название фразы"
+              class="phrase-name" autofocus="" tabindex="1"></textarea>
 
     <label class="label" for="select">Категория</label>
-    <select id="select"></select>
+    <p class="select-item select__main-cat js-change-main-cat">Главная</p>
+    <select id="select" class="select"></select>
+    <p class="select-item select__old-cat js-change-old-cat"></p>
 
     <label class="label" for="icon">Изображение</label>
     <input type="text" name="icon" id="icon">
@@ -26,15 +30,20 @@
     <label class="label" for="background">Фон</label>
     <input type="color" id="background" name="background" value="#74AAF6">
     <div class="back-cont">
-        <div class="back-cont__item js-back-cont__item back-cont__item_red" data-color="#ff0000"></div>
-        <div class="back-cont__item js-back-cont__item back-cont__item_yellow" data-color="#ffff00"></div>
-        <div class="back-cont__item js-back-cont__item back-cont__item_lime" data-color="#00ff00"></div>
-        <div class="back-cont__item js-back-cont__item back-cont__item_blue" data-color="#0080ff"></div>
-        <div class="back-cont__item js-back-cont__item back-cont__item_lilac" data-color="#8000ff"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_red"
+             data-color="#ff0000"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_yellow"
+             data-color="#ffff00"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_lime"
+             data-color="#00ff00"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_blue"
+             data-color="#0080ff"></div>
+        <div class="back-cont__item js-back-cont__item back-cont__item_lilac"
+             data-color="#8000ff"></div>
     </div>
 
-    <label class="label" for="title_text">Описание</label>
-    <textarea name="title" id="title_text"></textarea>
+    <!--<label class="label" for="title_text">Описание</label>-->
+    <textarea name="title" id="title_text" placeholder="Описание"></textarea>
 
     <input type="button" name="but_send" id="but_send_form" value="Создать ссылку" tabindex="1">
 

@@ -58,15 +58,30 @@
 .label {
     display: block;
     margin-bottom: 5px;
-    margin-top: 12px;
+    margin-top: 8px;
     font-size: 14px;
 }
 
-#name {
+.phrase-name {
+    margin-top: 3px;
     width: 100%;
-    min-height: 100px;
-    font-size: 17px;
+    min-height: 90px;
+    font-size: 16px;
     resize: vertical;
+}
+
+.select-item {
+    line-height: normal;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px 0;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.select-item.active {
+    color: red;
+    background: rgba(77, 173, 179, 0.24);
 }
 
 #select {
@@ -81,7 +96,7 @@
     width: 100%;
     border: none;
     background: #ffffff;
-    height: 30px;
+    height: 25px;
     padding: 0;
     cursor: pointer;
     display: block;

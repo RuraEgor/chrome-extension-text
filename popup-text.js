@@ -1,11 +1,22 @@
-let butSend = document.getElementById('but_send_form');
+const butSend = document.getElementById('but_send_form');
+
+const selMainCat = document.querySelector('.js-change-main-cat');
+const selOldCat = document.querySelector('.js-change-old-cat');
 
 //=====  GET IF-MES BLOCKS
-let mesSuc = document.getElementById('mes-suc');
-let mesEror = document.getElementById('mes-error');
-let mesEmpty = document.getElementById('mes-empty');
+const mesSuc = document.getElementById('mes-suc');
+const mesEror = document.getElementById('mes-error');
+const mesEmpty = document.getElementById('mes-empty');
 
-let masData = {
+let flag = false;
+let flagOld = false;
+
+let oldCatZn = {
+	id: 0,
+	name: ''
+};
+
+const masData = {
 	'name': '',
 	'group': '',
 	'group_id': '',
@@ -47,12 +58,25 @@ if (butSend) {
 		
 		if (masData['name'] && masData['name'] != '') {
 			
-			const $elemSel = document.getElementById('select');
-			masData['group'] = $elemSel.options[$elemSel.selectedIndex].text;
-			masData['group_id'] = $elemSel.options[$elemSel.selectedIndex].value;
-			let nameSelIndex = $elemSel.selectedIndex;
+			if (!flag && !flagOld) {
+				const $elemSel = document.getElementById('select');
+				masData['group'] = $elemSel.options[$elemSel.selectedIndex].text;
+				masData['group_id'] = $elemSel.options[$elemSel.selectedIndex].value;
+				const nameSelIndex = $elemSel.selectedIndex;
+				
+				localStorage.setItem('nameSelIndex', nameSelIndex);
+				localStorage.setItem('nameOldCat', oldCatZn.idOld);
+			}
 			
-			localStorage.setItem('nameSelIndex', nameSelIndex);
+			if (flagOld) {
+				masData['group'] = oldCatZn.name;
+				masData['group_id'] = oldCatZn.id;
+			}
+			
+			if (flag) {
+				masData['group'] = 'Главная';
+				masData['group_id'] = 1;
+			}
 			
 			masData['icon'] = document.getElementById('icon').value;
 			masData['icon'] = masData['icon'].trim();
@@ -181,7 +205,6 @@ function getDataPage() {
 					}
 				}
 				
-				
 				return {title: window.document.title, url: window.location.href, text: sel() };
 			} + ')();'
 		}, function(results) {
@@ -195,10 +218,52 @@ function getDataPage() {
 //=====  TAKE NAME DIRECTORY FROM LOCALSTORAGE
 function takeLocalStore() {
 	
-	let nameSelIndex = localStorage.getItem('nameSelIndex');
+	const nameSelIndex = localStorage.getItem('nameSelIndex');
+	const nameOldCat = localStorage.getItem('nameOldCat');
 	
 	if (nameSelIndex) {
 		const $elemSel = document.getElementById('select');
 		document.getElementById('select').options[nameSelIndex].selected = true;
+		
+		oldCatZn.idOld = nameSelIndex;
+		
+		if (nameOldCat) {
+			oldCatZn.id = nameOldCat;
+			oldCatZn.name = $elemSel.options[nameOldCat].text;
+			
+			selOldCat.innerHTML = oldCatZn.name;
+		}
 	}
+}
+
+
+//=====  CHECK MAIN-CATEGORY
+if (selMainCat) {
+	selMainCat.addEventListener('click', function () {
+		if (flag) {
+			this.classList.remove('active');
+		} else {
+			this.classList.add('active');
+			selOldCat.classList.remove('active');
+		}
+		
+		flag = !flag;
+		flagOld = false;
+	})
+}
+
+
+//=====  CHECK OLD-CATEGORY
+if (selOldCat) {
+	selOldCat.addEventListener('click', function () {
+		if (flagOld) {
+			this.classList.remove('active');
+		} else {
+			this.classList.add('active');
+			selMainCat.classList.remove('active');
+		}
+		
+		flag = false;
+		flagOld = !flagOld;
+	})
 }
